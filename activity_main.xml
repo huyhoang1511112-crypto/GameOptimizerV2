@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textSize="28sp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GAME OPTIMIZER"
+                    android:textColor="#00E5FF"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="monospace"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tối ưu an toàn cho mọi Android"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- TRẠNG THÁI -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 Sẵn sàng tối ưu hóa"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp"
+            android:background="#1A1A1A"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- STATS 3 CỘT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#1A1A1A"
+                android:padding="12dp"
+                android:layout_marginEnd="6dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CPU" android:textColor="#666" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvCpu"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="--" android:textColor="#00E5FF"
+                    android:textSize="22sp" android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#1A1A1A"
+                android:padding="12dp"
+                android:layout_marginEnd="6dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="RAM Free" android:textColor="#666" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvRam"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="--" android:textColor="#76FF03"
+                    android:textSize="22sp" android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#1A1A1A"
+                android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nhiệt độ" android:textColor="#666" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvTemp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="--" android:textColor="#76FF03"
+                    android:textSize="22sp" android:fontFamily="monospace"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CÀI ĐẶT -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="CÀI ĐẶT TỐI ƯU"
+            android:textColor="#555" android:textSize="11sp" android:letterSpacing="0.2"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Toggle rows -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="#1A1A1A"
+            android:padding="14dp" android:layout_marginBottom="6dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🚀 Game Mode" android:textColor="#CCCCCC" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ưu tiên CPU/GPU cho tiến trình game"
+                    android:textColor="#666" android:textSize="11sp"/>
+            </LinearLayout>
+            <Switch android:id="@+id/swGameMode"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="#1A1A1A"
+            android:padding="14dp" android:layout_marginBottom="6dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🧹 Dọn RAM tự động" android:textColor="#CCCCCC" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Kill app chạy ngầm khi áp dụng"
+                    android:textColor="#666" android:textSize="11sp"/>
+            </LinearLayout>
+            <Switch android:id="@+id/swKillApps"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="#1A1A1A"
+            android:padding="14dp" android:layout_marginBottom="6dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🌙 Chặn thông báo" android:textColor="#CCCCCC" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Do Not Disturb khi đang chơi game"
+                    android:textColor="#666" android:textSize="11sp"/>
+            </LinearLayout>
+            <Switch android:id="@+id/swDnd"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="#1A1A1A"
+            android:padding="14dp" android:layout_marginBottom="20dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🛡 Bảo vệ nhiệt" android:textColor="#CCCCCC" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Cảnh báo khi nhiệt độ > 42°C"
+                    android:textColor="#666" android:textSize="11sp"/>
+            </LinearLayout>
+            <Switch android:id="@+id/swThermal"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- BUTTONS -->
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="⚡ TỐI ƯU NGAY"
+            android:textColor="#00E5FF"
+            android:background="#001F26"
+            android:textSize="16sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnRestore"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔄 Khôi phục mặc định"
+            android:textColor="#888888"
+            android:background="#1A1A1A"
+            android:enabled="false"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- GHI CHÚ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Lưu ý: App chỉ dùng API chính thức của Android, không cần root. Mọi thay đổi sẽ được hoàn nguyên khi thoát app."
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

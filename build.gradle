@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.gameoptimizer'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gameoptimizer"
+        minSdk 21          // Android 5.0 trở lên (hỗ trợ 99% thiết bị)
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                          'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Không cần thư viện ngoài — chỉ dùng Android SDK thuần
+}

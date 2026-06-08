@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Game Optimizer</string>
+    <string name="status_ready">🎮 Sẵn sàng tối ưu hóa</string>
+    <string name="btn_apply">⚡ TỐI ƯU NGAY</string>
+    <string name="btn_restore">🔄 Khôi phục mặc định</string>
+</resources>
